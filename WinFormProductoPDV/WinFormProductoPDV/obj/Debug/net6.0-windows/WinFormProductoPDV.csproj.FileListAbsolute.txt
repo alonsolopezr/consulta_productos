@@ -13,7 +13,8 @@ C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\bin\Debug\net6
 C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
 C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\bin\Debug\net6.0-windows\MySql.Data.xml
 C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.csproj.AssemblyReference.cache
-C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.Form1.resources
+C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.FrmConsulta.resources
+C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.FrmCRUD.resources
 C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.csproj.GenerateResource.cache
 C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\X\source\repos\PDV\WinFormProductoPDV\WinFormProductoPDV\obj\Debug\net6.0-windows\WinFormProductoPDV.AssemblyInfoInputs.cache
