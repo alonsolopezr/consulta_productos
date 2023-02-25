@@ -63,38 +63,7 @@ namespace WinFormProductoPDV
 
         private void FrmCRUD_Load(object sender, EventArgs e)
         {
-            //consultamos la BD para poner los registros actuales de productos
-            //1.conectarse
-            con.Open();
-            //2. crear el command (SELECT *)
-            comando = new MySqlCommand("SELECT * FROM productos ORDER BY nombre ASC");
-            //3. asociar la CONEXION al COMMAND
-            comando.Connection= con;
-            //4. ejecutar el COMMAND (dataReader = executeReader())
-            dr = comando.ExecuteReader();
-            //5. Mostrarlos en el GridView
-            if (dr.HasRows) {
-                dGridProductos.Rows.Clear();
-                //leer y mostrar DataGrid
-                while (dr.Read()) {
-                    //mostrar cada campo dentro un RENGLON del GridView
-                    dGridProductos.Rows.Add(
-                            dr.GetInt32(0),
-                            dr.GetString(1),
-                            dr.GetString(2),
-                            dr.GetString(3),
-                            dr.GetDouble(4),
-                            dr.GetString(5)
-                        );
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("No hay productos registrados aún...");
-            }
-            //6. cerrar conexion TE DIJE!!!!
-            con.Close();
+            this.cargarDatosADataGrid();
         }
 
         private void iconPicBoxNuevo_Click(object sender, EventArgs e)
@@ -177,5 +146,45 @@ namespace WinFormProductoPDV
                 txtImagen.Clear();
             }
         }
+
+        public void cargarDatosADataGrid() {
+            //consultamos la BD para poner los registros actuales de productos
+            //1.conectarse
+            con.Open();
+            //2. crear el command (SELECT *)
+            comando = new MySqlCommand("SELECT * FROM productos ORDER BY nombre ASC");
+            //3. asociar la CONEXION al COMMAND
+            comando.Connection = con;
+            //4. ejecutar el COMMAND (dataReader = executeReader())
+            dr = comando.ExecuteReader();
+            //5. Mostrarlos en el GridView
+            if (dr.HasRows)
+            {
+                dGridProductos.Rows.Clear();
+                //leer y mostrar DataGrid
+                while (dr.Read())
+                {
+                    //mostrar cada campo dentro un RENGLON del GridView
+                    dGridProductos.Rows.Add(
+                            dr.GetInt32(0),
+                            dr.GetString(1),
+                            dr.GetString(2),
+                            dr.GetString(3),
+                            dr.GetDouble(4),
+                            dr.GetString(5)
+                        );
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No hay productos registrados aún...");
+            }
+            //6. cerrar conexion TE DIJE!!!!
+            con.Close();
+        }
+   
+
+   
     }
 }
