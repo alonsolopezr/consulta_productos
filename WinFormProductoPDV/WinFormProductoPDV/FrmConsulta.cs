@@ -3,14 +3,14 @@ using System.Runtime.Intrinsics.Arm;
 
 namespace WinFormProductoPDV
 {
-    public partial class Form1 : Form
+    public partial class FrmConsulta : Form
     {
         //MysqlObjects
         MySqlConnection con = new MySqlConnection("Server=localhost;Database=productos_pdv;Uid=root;Pwd=;");
         MySqlCommand comando;
         //el obj para recibir datos de SELECT
         MySqlDataReader dr;
-        public Form1()
+        public FrmConsulta()
         {
             InitializeComponent();
         }
