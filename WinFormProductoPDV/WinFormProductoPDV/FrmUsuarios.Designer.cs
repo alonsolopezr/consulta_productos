@@ -1,14 +1,14 @@
 ﻿namespace WinFormProductoPDV
 {
-    partial class FrmCRUD
+    partial class FrmUsuarios
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,35 +23,32 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCRUD));
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panelPpal = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dGridProductos = new System.Windows.Forms.DataGridView();
+            this.dGridUsuarios = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPicBoxSave = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicBoxDelete = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicBoxEdit = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicBoxNuevo = new FontAwesome.Sharp.IconPictureBox();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblConfirmaContra = new System.Windows.Forms.Label();
+            this.txtConfirmaContra = new System.Windows.Forms.TextBox();
             this.lblCodBarras = new System.Windows.Forms.Label();
-            this.txtCodBarras = new System.Windows.Forms.TextBox();
-            this.lblImagen = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblFoto = new System.Windows.Forms.Label();
             this.txtImagen = new System.Windows.Forms.TextBox();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.iconPicBoxBuscar = new FontAwesome.Sharp.IconPictureBox();
@@ -59,7 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelPpal.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGridProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxDelete)).BeginInit();
@@ -67,16 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxBuscar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
             // 
             // panelPpal
             // 
@@ -86,32 +73,32 @@
             this.panelPpal.Location = new System.Drawing.Point(12, 12);
             this.panelPpal.Name = "panelPpal";
             this.panelPpal.Size = new System.Drawing.Size(1142, 638);
-            this.panelPpal.TabIndex = 0;
+            this.panelPpal.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.dGridProductos);
+            this.panel2.Controls.Add(this.dGridUsuarios);
             this.panel2.Location = new System.Drawing.Point(15, 409);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1108, 212);
             this.panel2.TabIndex = 1;
             // 
-            // dGridProductos
+            // dGridUsuarios
             // 
-            this.dGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGridProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column4,
+            this.Correo,
             this.Column3,
-            this.Column5,
             this.Column6});
-            this.dGridProductos.Location = new System.Drawing.Point(3, 3);
-            this.dGridProductos.Name = "dGridProductos";
-            this.dGridProductos.RowTemplate.Height = 25;
-            this.dGridProductos.Size = new System.Drawing.Size(1098, 426);
-            this.dGridProductos.TabIndex = 0;
+            this.dGridUsuarios.Location = new System.Drawing.Point(3, 3);
+            this.dGridUsuarios.Name = "dGridUsuarios";
+            this.dGridUsuarios.RowTemplate.Height = 25;
+            this.dGridUsuarios.Size = new System.Drawing.Size(1098, 426);
+            this.dGridUsuarios.TabIndex = 0;
+            this.dGridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridUsuarios_CellClick);
             // 
             // Column1
             // 
@@ -123,20 +110,16 @@
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             // 
-            // Column4
+            // Correo
             // 
-            this.Column4.HeaderText = "Código Barras";
-            this.Column4.Name = "Column4";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Desc";
+            this.Column3.HeaderText = "Password";
             this.Column3.Name = "Column3";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.Name = "Column5";
             // 
             // Column6
             // 
@@ -150,14 +133,14 @@
             this.panel1.Controls.Add(this.iconPicBoxDelete);
             this.panel1.Controls.Add(this.iconPicBoxEdit);
             this.panel1.Controls.Add(this.iconPicBoxNuevo);
-            this.panel1.Controls.Add(this.lblPrecio);
-            this.panel1.Controls.Add(this.txtPrecio);
+            this.panel1.Controls.Add(this.lblConfirmaContra);
+            this.panel1.Controls.Add(this.txtConfirmaContra);
             this.panel1.Controls.Add(this.lblCodBarras);
-            this.panel1.Controls.Add(this.txtCodBarras);
-            this.panel1.Controls.Add(this.lblImagen);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.lblFoto);
             this.panel1.Controls.Add(this.txtImagen);
-            this.panel1.Controls.Add(this.lblDescripcion);
-            this.panel1.Controls.Add(this.txtDescripcion);
+            this.panel1.Controls.Add(this.lblCorreo);
+            this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.iconPicBoxBuscar);
@@ -167,6 +150,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1108, 380);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // iconPicBoxSave
             // 
@@ -200,6 +184,7 @@
             this.iconPicBoxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPicBoxDelete.TabIndex = 15;
             this.iconPicBoxDelete.TabStop = false;
+            this.iconPicBoxDelete.Click += new System.EventHandler(this.iconPicBoxDelete_Click);
             // 
             // iconPicBoxEdit
             // 
@@ -234,24 +219,25 @@
             this.iconPicBoxNuevo.TabStop = false;
             this.iconPicBoxNuevo.Click += new System.EventHandler(this.iconPicBoxNuevo_Click);
             // 
-            // lblPrecio
+            // lblConfirmaContra
             // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrecio.Location = new System.Drawing.Point(692, 235);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(100, 27);
-            this.lblPrecio.TabIndex = 12;
-            this.lblPrecio.Text = "Precio:";
+            this.lblConfirmaContra.AutoSize = true;
+            this.lblConfirmaContra.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblConfirmaContra.Location = new System.Drawing.Point(569, 235);
+            this.lblConfirmaContra.Name = "lblConfirmaContra";
+            this.lblConfirmaContra.Size = new System.Drawing.Size(223, 27);
+            this.lblConfirmaContra.TabIndex = 12;
+            this.lblConfirmaContra.Text = "Confirma Contra:";
             // 
-            // txtPrecio
+            // txtConfirmaContra
             // 
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrecio.Location = new System.Drawing.Point(798, 228);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(258, 39);
-            this.txtPrecio.TabIndex = 11;
+            this.txtConfirmaContra.Enabled = false;
+            this.txtConfirmaContra.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConfirmaContra.Location = new System.Drawing.Point(798, 228);
+            this.txtConfirmaContra.Name = "txtConfirmaContra";
+            this.txtConfirmaContra.PasswordChar = '*';
+            this.txtConfirmaContra.Size = new System.Drawing.Size(258, 39);
+            this.txtConfirmaContra.TabIndex = 11;
             // 
             // lblCodBarras
             // 
@@ -259,28 +245,29 @@
             this.lblCodBarras.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCodBarras.Location = new System.Drawing.Point(22, 235);
             this.lblCodBarras.Name = "lblCodBarras";
-            this.lblCodBarras.Size = new System.Drawing.Size(228, 27);
+            this.lblCodBarras.Size = new System.Drawing.Size(159, 27);
             this.lblCodBarras.TabIndex = 10;
-            this.lblCodBarras.Text = "Código de Barras:";
+            this.lblCodBarras.Text = "Contraseña:";
             // 
-            // txtCodBarras
+            // txtPassword
             // 
-            this.txtCodBarras.Enabled = false;
-            this.txtCodBarras.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodBarras.Location = new System.Drawing.Point(270, 227);
-            this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(398, 39);
-            this.txtCodBarras.TabIndex = 9;
+            this.txtPassword.Enabled = false;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Location = new System.Drawing.Point(270, 227);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '?';
+            this.txtPassword.Size = new System.Drawing.Size(280, 39);
+            this.txtPassword.TabIndex = 9;
             // 
-            // lblImagen
+            // lblFoto
             // 
-            this.lblImagen.AutoSize = true;
-            this.lblImagen.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblImagen.Location = new System.Drawing.Point(21, 280);
-            this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(104, 27);
-            this.lblImagen.TabIndex = 8;
-            this.lblImagen.Text = "Imagen:";
+            this.lblFoto.AutoSize = true;
+            this.lblFoto.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFoto.Location = new System.Drawing.Point(21, 280);
+            this.lblFoto.Name = "lblFoto";
+            this.lblFoto.Size = new System.Drawing.Size(78, 27);
+            this.lblFoto.TabIndex = 8;
+            this.lblFoto.Text = "Foto:";
             // 
             // txtImagen
             // 
@@ -291,24 +278,24 @@
             this.txtImagen.Size = new System.Drawing.Size(787, 39);
             this.txtImagen.TabIndex = 7;
             // 
-            // lblDescripcion
+            // lblCorreo
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDescripcion.Location = new System.Drawing.Point(22, 192);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(163, 27);
-            this.lblDescripcion.TabIndex = 6;
-            this.lblDescripcion.Text = "Descripción:";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCorreo.Location = new System.Drawing.Point(22, 192);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(108, 27);
+            this.lblCorreo.TabIndex = 6;
+            this.lblCorreo.Text = "Correo:";
             // 
-            // txtDescripcion
+            // txtCorreo
             // 
-            this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDescripcion.Location = new System.Drawing.Point(270, 181);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(787, 39);
-            this.txtDescripcion.TabIndex = 5;
+            this.txtCorreo.Enabled = false;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCorreo.Location = new System.Drawing.Point(270, 181);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(787, 39);
+            this.txtCorreo.TabIndex = 5;
             // 
             // lblNombre
             // 
@@ -316,9 +303,9 @@
             this.lblNombre.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNombre.Location = new System.Drawing.Point(21, 141);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(141, 27);
+            this.lblNombre.Size = new System.Drawing.Size(113, 27);
             this.lblNombre.TabIndex = 4;
-            this.lblNombre.Text = "Producto:";
+            this.lblNombre.Text = "Nombre:";
             // 
             // txtNombre
             // 
@@ -344,7 +331,6 @@
             this.iconPicBoxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPicBoxBuscar.TabIndex = 2;
             this.iconPicBoxBuscar.TabStop = false;
-            this.iconPicBoxBuscar.Click += new System.EventHandler(this.iconPicBoxBuscar_Click);
             // 
             // txtBuscador
             // 
@@ -360,23 +346,22 @@
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(21, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 27);
+            this.label1.Size = new System.Drawing.Size(218, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Producto a Buscar";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Usuario a Buscar";
             // 
-            // FrmCRUD
+            // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 662);
+            this.ClientSize = new System.Drawing.Size(1166, 661);
             this.Controls.Add(this.panelPpal);
-            this.Name = "FrmCRUD";
-            this.Text = "Catálogo de Productos";
-            this.Load += new System.EventHandler(this.FrmCRUD_Load);
+            this.Name = "FrmUsuarios";
+            this.Text = "FrmUsuarios";
+            this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             this.panelPpal.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGridProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridUsuarios)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxSave)).EndInit();
@@ -390,33 +375,31 @@
 
         #endregion
 
-        private PrintPreviewDialog printPreviewDialog1;
         private Panel panelPpal;
         private Panel panel2;
-        private DataGridView dGridProductos;
+        private DataGridView dGridUsuarios;
         private Panel panel1;
-        private TextBox txtBuscador;
-        private Label label1;
-        private FontAwesome.Sharp.IconPictureBox iconPicBoxBuscar;
-        private TextBox txtNombre;
-        private Label lblPrecio;
-        private TextBox txtPrecio;
-        private Label lblCodBarras;
-        private TextBox txtCodBarras;
-        private Label lblImagen;
-        private TextBox txtImagen;
-        private Label lblDescripcion;
-        private TextBox txtDescripcion;
-        private Label lblNombre;
         private FontAwesome.Sharp.IconPictureBox iconPicBoxSave;
         private FontAwesome.Sharp.IconPictureBox iconPicBoxDelete;
         private FontAwesome.Sharp.IconPictureBox iconPicBoxEdit;
         private FontAwesome.Sharp.IconPictureBox iconPicBoxNuevo;
+        private Label lblConfirmaContra;
+        private TextBox txtConfirmaContra;
+        private Label lblCodBarras;
+        private TextBox txtPassword;
+        private Label lblFoto;
+        private TextBox txtImagen;
+        private Label lblCorreo;
+        private TextBox txtCorreo;
+        private Label lblNombre;
+        private TextBox txtNombre;
+        private FontAwesome.Sharp.IconPictureBox iconPicBoxBuscar;
+        private TextBox txtBuscador;
+        private Label label1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Correo;
         private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
     }
 }
