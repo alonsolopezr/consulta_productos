@@ -149,7 +149,7 @@ namespace WinFormProductoPDV
 
         public void cargarDatosADataGrid() {
             //consultamos la BD para poner los registros actuales de productos
-            //1.conectarse
+            //1.conectarse a mysql
             con.Open();
             //2. crear el command (SELECT *)
             comando = new MySqlCommand("SELECT * FROM productos ORDER BY nombre ASC");
