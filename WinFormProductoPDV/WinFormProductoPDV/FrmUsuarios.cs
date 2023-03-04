@@ -166,9 +166,9 @@ namespace WinFormProductoPDV
                 {
                     //mostrar cada campo dentro un RENGLON del GridView
                     dGridUsuarios.Rows.Add(
-                            dr.GetInt32(0),
-                            dr.GetString(1),
-                            dr.GetString(3),
+                            dr.GetInt32("id"),
+                            dr.GetString("nombre"),
+                            dr.GetString(""),
                             dr.GetString(2),
                             dr.GetString(4)
                         );

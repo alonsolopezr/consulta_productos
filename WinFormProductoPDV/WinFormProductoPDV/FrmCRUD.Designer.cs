@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCRUD));
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panelPpal = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dGridProductos = new System.Windows.Forms.DataGridView();
@@ -40,6 +38,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPicBoxOpenImage = new FontAwesome.Sharp.IconPictureBox();
+            this.picBoxImagen = new System.Windows.Forms.PictureBox();
             this.iconPicBoxSave = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicBoxDelete = new FontAwesome.Sharp.IconPictureBox();
             this.iconPicBoxEdit = new FontAwesome.Sharp.IconPictureBox();
@@ -57,26 +57,19 @@
             this.iconPicBoxBuscar = new FontAwesome.Sharp.IconPictureBox();
             this.txtBuscador = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.openDialogProdImagen = new System.Windows.Forms.OpenFileDialog();
             this.panelPpal.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridProductos)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxOpenImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxBuscar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
             // 
             // panelPpal
             // 
@@ -112,6 +105,8 @@
             this.dGridProductos.RowTemplate.Height = 25;
             this.dGridProductos.Size = new System.Drawing.Size(1098, 426);
             this.dGridProductos.TabIndex = 0;
+            this.dGridProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridProductos_CellClick);
+            this.dGridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridProductos_CellContentClick);
             // 
             // Column1
             // 
@@ -146,6 +141,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.iconPicBoxOpenImage);
+            this.panel1.Controls.Add(this.picBoxImagen);
             this.panel1.Controls.Add(this.iconPicBoxSave);
             this.panel1.Controls.Add(this.iconPicBoxDelete);
             this.panel1.Controls.Add(this.iconPicBoxEdit);
@@ -167,6 +164,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1108, 380);
             this.panel1.TabIndex = 0;
+            // 
+            // iconPicBoxOpenImage
+            // 
+            this.iconPicBoxOpenImage.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPicBoxOpenImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPicBoxOpenImage.ForeColor = System.Drawing.Color.LawnGreen;
+            this.iconPicBoxOpenImage.IconChar = FontAwesome.Sharp.IconChar.Image;
+            this.iconPicBoxOpenImage.IconColor = System.Drawing.Color.LawnGreen;
+            this.iconPicBoxOpenImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPicBoxOpenImage.IconSize = 39;
+            this.iconPicBoxOpenImage.Location = new System.Drawing.Point(635, 273);
+            this.iconPicBoxOpenImage.Name = "iconPicBoxOpenImage";
+            this.iconPicBoxOpenImage.Size = new System.Drawing.Size(39, 39);
+            this.iconPicBoxOpenImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPicBoxOpenImage.TabIndex = 18;
+            this.iconPicBoxOpenImage.TabStop = false;
+            this.iconPicBoxOpenImage.Click += new System.EventHandler(this.iconPicBoxOpenImage_Click);
+            // 
+            // picBoxImagen
+            // 
+            this.picBoxImagen.Location = new System.Drawing.Point(817, 137);
+            this.picBoxImagen.Name = "picBoxImagen";
+            this.picBoxImagen.Size = new System.Drawing.Size(206, 175);
+            this.picBoxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxImagen.TabIndex = 17;
+            this.picBoxImagen.TabStop = false;
+            this.picBoxImagen.Click += new System.EventHandler(this.picBoxImagen_Click);
             // 
             // iconPicBoxSave
             // 
@@ -238,7 +262,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrecio.Location = new System.Drawing.Point(692, 235);
+            this.lblPrecio.Location = new System.Drawing.Point(490, 189);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(100, 27);
             this.lblPrecio.TabIndex = 12;
@@ -248,9 +272,9 @@
             // 
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrecio.Location = new System.Drawing.Point(798, 228);
+            this.txtPrecio.Location = new System.Drawing.Point(490, 223);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(258, 39);
+            this.txtPrecio.Size = new System.Drawing.Size(184, 39);
             this.txtPrecio.TabIndex = 11;
             // 
             // lblCodBarras
@@ -267,16 +291,16 @@
             // 
             this.txtCodBarras.Enabled = false;
             this.txtCodBarras.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodBarras.Location = new System.Drawing.Point(270, 227);
+            this.txtCodBarras.Location = new System.Drawing.Point(245, 229);
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(398, 39);
+            this.txtCodBarras.Size = new System.Drawing.Size(225, 39);
             this.txtCodBarras.TabIndex = 9;
             // 
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblImagen.Location = new System.Drawing.Point(21, 280);
+            this.lblImagen.Location = new System.Drawing.Point(22, 273);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(104, 27);
             this.lblImagen.TabIndex = 8;
@@ -286,9 +310,9 @@
             // 
             this.txtImagen.Enabled = false;
             this.txtImagen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtImagen.Location = new System.Drawing.Point(269, 273);
+            this.txtImagen.Location = new System.Drawing.Point(132, 273);
             this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(787, 39);
+            this.txtImagen.Size = new System.Drawing.Size(478, 39);
             this.txtImagen.TabIndex = 7;
             // 
             // lblDescripcion
@@ -305,9 +329,9 @@
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDescripcion.Location = new System.Drawing.Point(270, 181);
+            this.txtDescripcion.Location = new System.Drawing.Point(190, 183);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(787, 39);
+            this.txtDescripcion.Size = new System.Drawing.Size(280, 39);
             this.txtDescripcion.TabIndex = 5;
             // 
             // lblNombre
@@ -324,9 +348,9 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(269, 135);
+            this.txtNombre.Location = new System.Drawing.Point(168, 136);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(787, 39);
+            this.txtNombre.Size = new System.Drawing.Size(506, 39);
             this.txtNombre.TabIndex = 3;
             // 
             // iconPicBoxBuscar
@@ -365,6 +389,11 @@
             this.label1.Text = "Producto a Buscar";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // openDialogProdImagen
+            // 
+            this.openDialogProdImagen.FileName = "openFileDialog1";
+            this.openDialogProdImagen.Title = "Abrir Imagen de Producto";
+            // 
             // FrmCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -379,6 +408,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGridProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxOpenImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxEdit)).EndInit();
@@ -389,8 +420,6 @@
         }
 
         #endregion
-
-        private PrintPreviewDialog printPreviewDialog1;
         private Panel panelPpal;
         private Panel panel2;
         private DataGridView dGridProductos;
@@ -418,5 +447,8 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private PictureBox picBoxImagen;
+        private FontAwesome.Sharp.IconPictureBox iconPicBoxOpenImage;
+        private OpenFileDialog openDialogProdImagen;
     }
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TvqMb1+AqtQvgrNA0vnXal8/igYgJwrK55043aXyvRr3FAsmOKTdi35LKgL/8EUCKtYz3+KXUGqQYmTnWgGHyQ==",
+  "dgSpecHash": "0mQE6689TvsTKco4hiQ+UBeV6ANtowLC1IU/UDPr9l2xHA6xcD9quBBs6PWOrAI2Zsi9Bj7+ykqMddHavO0L8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\X\\source\\repos\\PDV\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\repo\\pdv\\consulta_productos\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\X\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
+    "C:\\Users\\Usuario\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
   ],
   "logs": []
 }

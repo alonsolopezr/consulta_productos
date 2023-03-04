@@ -54,6 +54,7 @@
             this.iconPicBoxBuscar = new FontAwesome.Sharp.IconPictureBox();
             this.txtBuscador = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPpal.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridUsuarios)).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPpal
@@ -129,6 +131,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.iconPicBoxSave);
             this.panel1.Controls.Add(this.iconPicBoxDelete);
             this.panel1.Controls.Add(this.iconPicBoxEdit);
@@ -243,27 +246,27 @@
             // 
             this.lblCodBarras.AutoSize = true;
             this.lblCodBarras.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCodBarras.Location = new System.Drawing.Point(22, 235);
+            this.lblCodBarras.Location = new System.Drawing.Point(235, 235);
             this.lblCodBarras.Name = "lblCodBarras";
-            this.lblCodBarras.Size = new System.Drawing.Size(159, 27);
+            this.lblCodBarras.Size = new System.Drawing.Size(75, 27);
             this.lblCodBarras.TabIndex = 10;
-            this.lblCodBarras.Text = "Contraseña:";
+            this.lblCodBarras.Text = "Pwd:";
             // 
             // txtPassword
             // 
             this.txtPassword.Enabled = false;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(270, 227);
+            this.txtPassword.Location = new System.Drawing.Point(316, 227);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '?';
-            this.txtPassword.Size = new System.Drawing.Size(280, 39);
+            this.txtPassword.Size = new System.Drawing.Size(234, 39);
             this.txtPassword.TabIndex = 9;
             // 
             // lblFoto
             // 
             this.lblFoto.AutoSize = true;
             this.lblFoto.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFoto.Location = new System.Drawing.Point(21, 280);
+            this.lblFoto.Location = new System.Drawing.Point(232, 279);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(78, 27);
             this.lblFoto.TabIndex = 8;
@@ -273,16 +276,16 @@
             // 
             this.txtImagen.Enabled = false;
             this.txtImagen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtImagen.Location = new System.Drawing.Point(269, 273);
+            this.txtImagen.Location = new System.Drawing.Point(316, 273);
             this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(787, 39);
+            this.txtImagen.Size = new System.Drawing.Size(740, 39);
             this.txtImagen.TabIndex = 7;
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCorreo.Location = new System.Drawing.Point(22, 192);
+            this.lblCorreo.Location = new System.Drawing.Point(202, 187);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(108, 27);
             this.lblCorreo.TabIndex = 6;
@@ -292,16 +295,16 @@
             // 
             this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCorreo.Location = new System.Drawing.Point(270, 181);
+            this.txtCorreo.Location = new System.Drawing.Point(316, 181);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(787, 39);
+            this.txtCorreo.Size = new System.Drawing.Size(741, 39);
             this.txtCorreo.TabIndex = 5;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(21, 141);
+            this.lblNombre.Location = new System.Drawing.Point(197, 141);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(113, 27);
             this.lblNombre.TabIndex = 4;
@@ -311,9 +314,9 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.Location = new System.Drawing.Point(269, 135);
+            this.txtNombre.Location = new System.Drawing.Point(316, 135);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(787, 39);
+            this.txtNombre.Size = new System.Drawing.Size(740, 39);
             this.txtNombre.TabIndex = 3;
             // 
             // iconPicBoxBuscar
@@ -350,6 +353,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario a Buscar";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(21, 141);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 171);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -369,6 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicBoxBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,5 +413,6 @@
         private DataGridViewTextBoxColumn Correo;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column6;
+        private PictureBox pictureBox1;
     }
 }

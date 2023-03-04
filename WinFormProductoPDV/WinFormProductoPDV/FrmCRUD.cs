@@ -10,6 +10,9 @@ namespace WinFormProductoPDV
         MySqlCommand comando;
         //el obj para recibir datos de SELECT
         MySqlDataReader dr;
+        //guardar el id al darle click en el DataGrid
+        int id = 0;
+
         public FrmCRUD()
         {
             InitializeComponent();
@@ -99,6 +102,14 @@ namespace WinFormProductoPDV
             {
                 //msg OK
                 MessageBox.Show("Producto creado OK!");
+                //validar que el picbox tenga imagen
+                if (picBoxImagen.Image != null) {
+                   
+
+                    //guardar la imagen en la carpeta de imagenes de producto
+                    picBoxImagen.Image.Save("..\\..\\..\\imagenes\\" + txtImagen.Text);
+                }
+              
             }
             else
             {
@@ -166,12 +177,12 @@ namespace WinFormProductoPDV
                 {
                     //mostrar cada campo dentro un RENGLON del GridView
                     dGridProductos.Rows.Add(
-                            dr.GetInt32(0),
-                            dr.GetString(1),
-                            dr.GetString(2),
-                            dr.GetString(3),
-                            dr.GetDouble(4),
-                            dr.GetString(5)
+                            dr.GetInt32("id"),
+                            dr.GetString("nombre"),
+                            dr.GetString("codigo_barras"),
+                            dr.GetString("descripcion"),
+                            dr.GetDouble("precio"),
+                            dr.GetString("imagen")
                         );
                 }
 
@@ -183,8 +194,49 @@ namespace WinFormProductoPDV
             //6. cerrar conexion TE DIJE!!!!
             con.Close();
         }
-   
 
-   
+        private void iconPicBoxOpenImage_Click(object sender, EventArgs e)
+        {
+            //abrir el OpenFiledialog
+            DialogResult res = openDialogProdImagen.ShowDialog();
+            //cargar archivo en el picBox
+            if (res == DialogResult.OK)
+            {
+                picBoxImagen.Image = new Bitmap(openDialogProdImagen.FileName);
+                //crear nombre unico de arch de imagen
+                DateTime dtNombre = DateTime.Now;
+                string nombreImg = "prod_" + dtNombre.Ticks + ".png";
+                txtImagen.Text = nombreImg;
+            }
+            else
+            {
+
+            }
+        }
+
+        private void dGridProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //cargar los datos  al form
+            
+            this.id = int.Parse(dGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString()); //id
+            txtNombre.Text = dGridProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
+         
+            txtCodBarras.Text  = dGridProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtDescripcion.Text = dGridProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtPrecio.Text = dGridProductos.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtImagen.Text = dGridProductos.Rows[e.RowIndex].Cells[5].Value.ToString();
+            //tambien la imagen del picBox
+            picBoxImagen.ImageLocation = "..\\..\\..\\imagenes\\"+txtImagen.Text;
+        }
+
+        private void picBoxImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dGridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

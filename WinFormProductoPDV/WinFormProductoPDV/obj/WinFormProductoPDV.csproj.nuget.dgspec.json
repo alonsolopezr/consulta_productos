@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\X\\source\\repos\\PDV\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj": {}
+    "C:\\Users\\Usuario\\repo\\pdv\\consulta_productos\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\X\\source\\repos\\PDV\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj": {
+    "C:\\Users\\Usuario\\repo\\pdv\\consulta_productos\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\X\\source\\repos\\PDV\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\repo\\pdv\\consulta_productos\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj",
         "projectName": "WinFormProductoPDV",
-        "projectPath": "C:\\Users\\X\\source\\repos\\PDV\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj",
-        "packagesPath": "C:\\Users\\X\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\X\\source\\repos\\PDV\\WinFormProductoPDV\\WinFormProductoPDV\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\repo\\pdv\\consulta_productos\\WinFormProductoPDV\\WinFormProductoPDV\\WinFormProductoPDV.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\repo\\pdv\\consulta_productos\\WinFormProductoPDV\\WinFormProductoPDV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\X\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
